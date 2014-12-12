@@ -1,13 +1,14 @@
 from bibliopixel.drivers.network import DriverNetwork
 from bibliopixel.led import LEDStrip
+from bibliopixel.animation import *
 
 class StripTest(BaseStripAnim):
     def __init__(self, led, start=0, end=-1):
         #The base class MUST be initialized by calling super like this
         super(StripTest, self).__init__(led, start, end)
         #Create a color array to use in the animation
-        #self._colors = [colors.Red, colors.Orange, colors.Yellow, colors.Green, colors.Blue, colors.Indigo]
-        self._colors = [colors.DarkBlue]
+        self._colors = [colors.Red, colors.Orange, colors.Yellow, colors.Green, colors.Blue, colors.Indigo]
+        #self._colors = [colors.DarkBlue]
 
     def step(self, amt = 1):
         #Fill the strip, with each sucessive color 
