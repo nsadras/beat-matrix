@@ -7,8 +7,16 @@ class StripTest(BaseStripAnim):
         #The base class MUST be initialized by calling super like this
         super(StripTest, self).__init__(led, start, end)
         #Create a color array to use in the animation
-        self._colors = [colors.Red, colors.Orange, colors.Yellow, colors.Green, colors.Blue, colors.Indigo]
-        #self._colors = [colors.DarkBlue]
+        rainbow = [colors.Red, colors.Orange, colors.Yellow, colors.Green, colors.Blue, colors.Indigo, colors.Violet]
+        ocean = [colors.DarkBlue, colors.Blue, colors.Teal, colors.Turquoise]
+        fire = [colors.Red, colors.Orange, colors.DarkOrange, colors.OrangeRed, colors.DarkRed]
+        forest = [colors.DarkOliveGreen, colors.Green, colors.LightGreen, colors.DarkGreen, colors.LawnGreen]
+        cool = [colors.Blue, colors.Green, colors.DarkBlue, colors.DarkViolet, colors.Indigo, colors.Teal, colors.DarkTurquoise]
+        tron = [(0xDF, 0x74, 0xC), (0x6F, 0xC3, 0xDF), (0x0C, 0x14, 0x1F)]
+        dark = [colors.DarkCyan, colors.DarkBlue, colors.DarkGreen]
+        periwinkle = [colors.SlateBlue]
+        sparse = [colors.Black, colors.Black, colors.Black, colors.Black, colors.Black, colors.Black, colors.Black, colors.DarkBlue]
+        self._colors = sparse
 
     def step(self, amt = 1):
         #Fill the strip, with each sucessive color 
